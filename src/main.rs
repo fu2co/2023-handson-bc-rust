@@ -1,15 +1,10 @@
 use std::fmt::{Debug, Display};
 
 #[allow(dead_code)]
+#[derive(Debug)]
 struct Process {
     active: bool,
     id: isize
-}
-
-impl Debug for Process {
-    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
-        f.debug_struct("Process").field("active", &self.active).field("id", &self.id).finish()
-    }
 }
 
 impl Display for Process {
@@ -22,7 +17,7 @@ impl Display for Process {
 }
 
 fn main() {
-    let ap = Process {active: false, id: 100};
+    let ap = Process {active: true, id: 100};
     println!("My process: {:?}", ap);
     println!("My process: {}", ap);
 } 
