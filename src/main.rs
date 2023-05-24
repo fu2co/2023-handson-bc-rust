@@ -18,15 +18,16 @@ impl Display for Process {
 
 fn main() {
     let ap = Process {active: true, id: 100};
-    println!("My process: {:?}", ap);
-    println!("My process: {}", ap);
+    let aq = &ap;
+    println!("My process: {:?}, {:?}", ap, aq);
+    println!("My process: {}, {}", ap, aq);
 } 
 
 // demo topics
 // =============================
 // [x] println macro
 // [x] trait Debug / Display
-// [ ] move variable -> shallow copy
+// [x] move variable -> shallow copy
 // [ ] trait Clone -> deep copy
 // [ ] trait Copy
 // [ ] implement lifetimes
