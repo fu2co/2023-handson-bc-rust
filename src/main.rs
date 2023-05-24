@@ -32,4 +32,4 @@ fn main() {
 // [x] move variable -> shallow copy
 // [x] trait Clone -> deep copy
 // [x] trait Copy
-// [x] implement lifetimes
+// [x] implement lifetimes | debugger: CodeLLDB
