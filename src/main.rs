@@ -1,7 +1,7 @@
 use std::fmt::{Debug, Display};
 
 #[allow(dead_code)]
-#[derive(Debug,Clone)]
+#[derive(Debug,Clone,Copy)]
 struct Process {
     active: bool,
     id: isize
@@ -18,7 +18,7 @@ impl Display for Process {
 
 fn main() {
     let ap = Process {active: true, id: 100};
-    let aq = ap.clone();
+    let aq = ap;
     println!("My process: {:?}, {:?}", ap, aq);
     println!("My process: {}, {}", ap, aq);
     println!("pointers: {:p} {:p}", &ap, &aq);
@@ -30,5 +30,5 @@ fn main() {
 // [x] trait Debug / Display
 // [x] move variable -> shallow copy
 // [x] trait Clone -> deep copy
-// [ ] trait Copy
+// [x] trait Copy
 // [ ] implement lifetimes
