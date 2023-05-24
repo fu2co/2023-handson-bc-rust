@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 struct Process {
     active: bool,
     id: isize
@@ -5,11 +6,12 @@ struct Process {
 
 fn main() {
     let ap = Process {active: true, id: 100};
+    println!("My id: {:?}", ap.id);
 } 
 
 // demo topics
 // =============================
-// [ ] println macro
+// [x] println macro
 // [ ] trait Debug / Display
 // [ ] move variable -> shallow copy
 // [ ] trait Clone -> deep copy
